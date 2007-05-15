@@ -865,7 +865,9 @@ namespace LookOrFeel.Animation
         private static void HandleEquationChanged( object sender, DependencyPropertyChangedEventArgs e )
         {
             PennerDoubleAnimation pda = sender as PennerDoubleAnimation;
-            pda.Equation = ( PennerDoubleAnimation.Equations ) e.NewValue;
+
+            // cache method so we avoid lookup while animating
+            pda._EasingMethod = typeof( PennerDoubleAnimation ).GetMethod( e.NewValue.ToString() );
         }
 
         #endregion
