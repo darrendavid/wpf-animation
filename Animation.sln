@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Animation", "Animation\Animation.csproj", "{2798A78D-6C48-4DDE-8AE1-B013F8F4CD11}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnimationTester", "AnimationTester\AnimationTester.csproj", "{07D96B23-A2C4-4668-848B-F3CE17FC3E20}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2798A78D-6C48-4DDE-8AE1-B013F8F4CD11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2798A78D-6C48-4DDE-8AE1-B013F8F4CD11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2798A78D-6C48-4DDE-8AE1-B013F8F4CD11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2798A78D-6C48-4DDE-8AE1-B013F8F4CD11}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07D96B23-A2C4-4668-848B-F3CE17FC3E20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07D96B23-A2C4-4668-848B-F3CE17FC3E20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07D96B23-A2C4-4668-848B-F3CE17FC3E20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07D96B23-A2C4-4668-848B-F3CE17FC3E20}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
