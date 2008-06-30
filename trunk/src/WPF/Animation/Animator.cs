@@ -101,6 +101,17 @@ namespace LookOrFeel.Animation
         #endregion
 
         /// <summary>
+        /// Stops an animation in progress, sets the new value, and clears the clock.
+        /// </summary>
+        /// <param name="animatable"></param>
+        /// <param name="property"></param>
+        public static void ClearAnimation( DependencyObject animatable, DependencyProperty property )
+        {
+            animatable.SetValue( property, animatable.GetValue( property ) );
+            ( ( IAnimatable ) animatable ).ApplyAnimationClock( property, null );
+        }
+
+        /// <summary>
         /// Method to configure and start an animation.
         /// </summary>
         private static AnimationClock Animate(
@@ -125,10 +136,7 @@ namespace LookOrFeel.Animation
             EventHandler eh = null;
             eh = delegate( object sender, EventArgs e )
                  {
-                     animatable.SetValue( prop, animatable.GetValue( prop ) );
-
-                     ( ( IAnimatable ) animatable ).ApplyAnimationClock( prop, null );                    
-
+                     Animator.ClearAnimation( animatable, prop );
                      animClock.Completed -= eh;
                  };
 
@@ -141,6 +149,7 @@ namespace LookOrFeel.Animation
             animClock.Controller.Begin();
 
             // goferit
+            Animator.ClearAnimation( animatable, prop );
             ( ( IAnimatable ) animatable ).ApplyAnimationClock( prop, animClock );
 
             return animClock;
