@@ -95,7 +95,7 @@ namespace LookOrFeel.Animation
             anim.From = from.GetValueOrDefault( defaultFrom );
             anim.To = to;
 
-            return Animate( element, prop, anim, durationMS, null, null, callbackFunc );
+            return Animate( element, prop, anim, durationMS, accel, decel, callbackFunc );
         }
 
         #endregion
